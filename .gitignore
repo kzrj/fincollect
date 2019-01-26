@@ -1,0 +1,10 @@
+*.pyc
+*.log
+**/migrations/*.py
+!**/migrations/__init__.py
+
+*.html
+!**/templates/*.html
+media/
+rabbit_data/
+postgres_data/
