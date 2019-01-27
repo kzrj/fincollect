@@ -1,42 +1,42 @@
 [
-    {
-        "model": "rates.currency",
-        "pk": 1,
-        "fields":
-            {
-                "short_name": "USD",
-                "full_name": "United States Dollar"
-            }
+	{
+		"model": "rates.currency",
+		"pk": 1,
+		"fields":
+			{
+				"short_name": "USD",
+				"full_name": "United States Dollar"
+			}
 
-    },
-    {
-        "model": "rates.currency",
-        "pk": 2,
-        "fields":
-            {
-                "short_name": "EUR",
-                "full_name": "Euro"
-            }
+	},
+	{
+		"model": "rates.currency",
+		"pk": 2,
+		"fields":
+			{
+				"short_name": "EUR",
+				"full_name": "Euro"
+			}
 
-    },
-    {
-        "model": "rates.currency",
-        "pk": 3,
-        "fields":
-            {
-                "short_name": "PLN",
-                "full_name": "Polish Zloty"
-            }
+	},
+	{
+		"model": "rates.currency",
+		"pk": 3,
+		"fields":
+			{
+				"short_name": "PLN",
+				"full_name": "Polish Zloty"
+			}
 
-    },
-    {
-        "model": "rates.currency",
-        "pk": 4,
-        "fields":
-            {
-                "short_name": "CZK",
-                "full_name": "Czech Republic Koruna"
-            }
+	},
+	{
+		"model": "rates.currency",
+		"pk": 4,
+		"fields":
+			{
+				"short_name": "CZK",
+				"full_name": "Czech Republic Koruna"
+			}
 
-    },
+	}
 ]

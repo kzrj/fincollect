@@ -1,0 +1,194 @@
+[
+    {
+        "model": "rates.rate",
+        "pk": 1,
+        "fields":
+            {
+                "master_currency": 1,
+                "slave_currency": 1,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 2,
+        "fields":
+            {
+                "master_currency": 1,
+                "slave_currency": 2,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 3,
+        "fields":
+            {
+                "master_currency": 1,
+                "slave_currency": 3,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 4,
+        "fields":
+            {
+                "master_currency": 1,
+                "slave_currency": 4,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 5,
+        "fields":
+            {
+                "master_currency": 2,
+                "slave_currency": 1,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 6,
+        "fields":
+            {
+                "master_currency": 2,
+                "slave_currency": 2,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 7,
+        "fields":
+            {
+                "master_currency": 2,
+                "slave_currency": 3,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 8,
+        "fields":
+            {
+                "master_currency": 2,
+                "slave_currency": 4,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 9,
+        "fields":
+            {
+                "master_currency": 3,
+                "slave_currency": 1,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 10,
+        "fields":
+            {
+                "master_currency": 3,
+                "slave_currency": 2,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 11,
+        "fields":
+            {
+                "master_currency": 3,
+                "slave_currency": 3,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 12,
+        "fields":
+            {
+                "master_currency": 3,
+                "slave_currency": 4,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 13,
+        "fields":
+            {
+                "master_currency": 4,
+                "slave_currency": 1,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 14,
+        "fields":
+            {
+                "master_currency": 4,
+                "slave_currency": 2,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 15,
+        "fields":
+            {
+                "master_currency": 4,
+                "slave_currency": 3,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    },
+    {
+        "model": "rates.rate",
+        "pk": 16,
+        "fields":
+            {
+                "master_currency": 4,
+                "slave_currency": 4,
+                "rate": 1,
+                "modified_at": "2019-01-27 00:00:00"
+            }
+
+    }
+]

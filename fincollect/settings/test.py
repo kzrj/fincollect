@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -174,8 +175,8 @@ MEDIA_URL = '/media/'
 
 # Celery
 CELERY_BEAT_SCHEDULE = {
-    # 'update_remainings': {
-    #     'task': 'products.tasks.update_remainings_from_parse',
-    #     'schedule': datetime.timedelta(days=1),
-    # },
+    'update_rates': {
+        'task': 'products.tasks.get_latest_rates',
+        'schedule': datetime.timedelta(seconds=15),
+    },
 }

@@ -9,7 +9,7 @@ class Currency(models.Model):
         return self.short_name
 
 
-class Rates(models.Model):
+class Rate(models.Model):
     master_currency = models.ForeignKey(Currency, on_delete=models.CASCADE, related_name='rates')
     slave_currency = models.ForeignKey(Currency, on_delete=models.CASCADE, related_name='rates_as_slave')
     rate = models.FloatField()
