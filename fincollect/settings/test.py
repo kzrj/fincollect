@@ -40,8 +40,7 @@ DJANGO_APPS = [
 ]
 
 OWN_APPS = [
-    'core.apps.CoreConfig',
-    'products.apps.ProductsConfig',
+    'rates.apps.RatesConfig',
     ]
 
 WEB_APPS = [
@@ -51,7 +50,7 @@ WEB_APPS = [
     'rest_framework_swagger'
 ]
 
-INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APP
+INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

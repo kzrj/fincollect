@@ -7,29 +7,29 @@ services:
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
       
-  rabbit:
-    restart: unless-stopped 
-    hostname: rabbit
-    image: rabbitmq:latest
-    volumes:
-      - ./rabbit_data:/var/lib/rabbitmq/mnesia/rabbit@rabbit
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=qwerty123
-    ports:
-      - "5673:5672"
+  # rabbit:
+  #   restart: unless-stopped 
+  #   hostname: rabbit
+  #   image: rabbitmq:latest
+  #   volumes:
+  #     - ./rabbit_data:/var/lib/rabbitmq/mnesia/rabbit@rabbit
+  #   environment:
+  #     - RABBITMQ_DEFAULT_USER=admin
+  #     - RABBITMQ_DEFAULT_PASS=qwerty123
+  #   ports:
+  #     - "5673:5672"
   
-  worker:
-    build: .
-    restart: unless-stopped
-    volumes:
-      - .:/code
-    links:
-      - db
-      - rabbit
-    depends_on:
-      - rabbit
-    command: bash -c "cd fincollect && celery -A fincollect worker -B --loglevel=info"
+  # worker:
+  #   build: .
+  #   restart: unless-stopped
+  #   volumes:
+  #     - .:/code
+  #   links:
+  #     - db
+  #     - rabbit
+  #   depends_on:
+  #     - rabbit
+  #   command: bash -c "cd fincollect && celery -A fincollect worker -B --loglevel=info"
     
   web:
     build: .
@@ -38,20 +38,13 @@ services:
       - .:/code
       - ./media:/code/media
     depends_on:
-      - db
-    command: bash -c "python3 /code/fincollect/manage.py makemigrations --settings=settings.test && python3 /code/fincollect/manage.py migrate --settings=settings.test && python3 /code/fincollect/manage.py runserver 0.0.0.0:8000 --settings=settings.test"
+      - db    
+    # command: bash -c "cd fincollect && python3 manage.py makemigrations --no-input --settings=settings.test && python3 manage.py migrate --settings=settings.test && python3 manage.py runserver 0.0.0.0:8000 --settings=settings.test"
+    command: bash -c "cd fincollect && python3 manage.py makemigrations --no-input --settings=settings.test && python3 manage.py migrate --settings=settings.test && python3 manage.py test --noinput --settings=settings.test"
+    
     ports:
       - "8000:8000"
-      
-  parse_service:
-    build: ./parse_service
-    restart: unless-stopped
-    volumes:
-      - ./parse_service:/code
-    command: bash -c "python3 /code/src/app.py"
-    ports:
-      - "8001:8001"
-    
+        
 volumes:
   postgres_data:
   rabbit_data:

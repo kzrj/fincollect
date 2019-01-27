@@ -40,8 +40,7 @@ DJANGO_APPS = [
 ]
 
 OWN_APPS = [
-    'core.apps.CoreConfig',
-    'products.apps.ProductsConfig',
+    'rates.apps.RatesConfig',
     ]
 
 WEB_APPS = [
@@ -51,7 +50,7 @@ WEB_APPS = [
     'rest_framework_swagger'
 ]
 
-INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APP
+INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,11 +88,8 @@ WSGI_APPLICATION = 'fincollect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
