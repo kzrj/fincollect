@@ -12,14 +12,18 @@ class RatesViewTests(APITestCase):
     def setUp(self):
         self.client = APIClient()
 
-    def test_currencies(self):
+    def test_currencies_list(self):
         response = self.client.get('/api/currencies/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['count'], 4)
 
-    def test_rate(self):
-        response = self.client.get('/api/rate/', data={'master_currency': 'USD',
-        	'slave_currency': 'USD'})
+    def test_rate_retrieve(self):
+        response = self.client.get('/api/rate/', data={'master_currency': 1,
+        	'slave_currency': 1, 'amount': 1})
         
-        logger.error("LOG %s" % response.data)
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data['id'], 1)
+        self.assertEqual(response.data['total_amount'], 1)
+        self.assertEqual(response.data['rate'], 1)
+        self.assertEqual(response.data['master_currency'], 'USD')
+        self.assertEqual(response.data['slave_currency'], 'USD')

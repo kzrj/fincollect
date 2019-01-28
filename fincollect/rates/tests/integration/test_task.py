@@ -4,7 +4,7 @@ from django.test import TestCase
 
 from rates.tasks import get_latest_rates
 from rates.models import Rate
-from rates.utils import APP_ID, get_latest, get_rate
+from rates.utils import APP_ID, get_rate
 
 
 class TasksTest(TestCase):

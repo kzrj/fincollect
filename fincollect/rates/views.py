@@ -16,11 +16,19 @@ class RateRetrieve(APIView):
     serializer_class = RateSerializer
 
     def get(self, request, format=None):
-    	print(request.GET)
-    	serializer = RateSerializer(data=request.GET)
-    	if serializer.is_valid():
-    		print('Valid')
-    	else:
-    		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    	
-    	return Response(request.GET)
+        serializer = RateSerializer(data=request.GET)
+        if serializer.is_valid():
+            rate = Rate.objects.filter(master_currency=serializer.validated_data['master_currency'],
+                slave_currency=serializer.validated_data['slave_currency']).first()
+            amount = rate.calculate_amount(serializer.validated_data['amount'])
+
+            return Response({
+                'id': rate.pk,
+                'master_currency': rate.master_currency.short_name,
+                'slave_currency': rate.slave_currency.short_name,
+                'rate': rate.rate,
+                'total_amount': amount
+            })
+
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

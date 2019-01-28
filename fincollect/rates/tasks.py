@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+import requests
+import logging
 
 from celery import shared_task
 
@@ -9,6 +9,8 @@ from django_bulk_update.helper import bulk_update
 
 from .models import Currency, Rate
 from .utils import APP_ID, get_rate
+
+logger = logging.getLogger(__name__)
 
 
 @shared_task
@@ -22,5 +24,5 @@ def get_latest_rates():
         bulk_update(rates, update_fields=['rate'])
 
     else:
-        pass
+        logger.critical('openexchangerates.org response is not ok. Rates are not updated!')
         # retry and log
