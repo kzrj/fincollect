@@ -48,7 +48,8 @@ WEB_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
-    'rest_framework_swagger'
+    'rest_framework_swagger',
+    'corsheaders'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APPS
@@ -56,6 +57,7 @@ INSTALLED_APPS = DJANGO_APPS + OWN_APPS + WEB_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -176,3 +178,30 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': datetime.timedelta(days=1),
     },
 }
+
+# CORS
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Access-Control-Allow-Origin',
+    'X-Total-Count',
+    'Access-Control-Expose-Headers',
+    'x-frame-options',
+)

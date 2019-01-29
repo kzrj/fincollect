@@ -1,8 +1,11 @@
+from django.http import HttpResponse
+
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .models import Currency, Rate
+from .tasks import get_latest_rates
 from .serializers import CurrencySerializer, RateSerializer
 
 
@@ -32,3 +35,8 @@ class RateRetrieve(APIView):
 
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+def update_rates_now(request):
+    get_latest_rates()
+    return HttpResponse('Rates are updated.')
