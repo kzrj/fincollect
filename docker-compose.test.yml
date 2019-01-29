@@ -36,7 +36,7 @@ services:
       - ./media:/app/media
     depends_on:
       - db
-    command: bash -c "cd fincollect && python3 manage.py makemigrations --no-input --settings=settings.test && python3 manage.py migrate --settings=settings.test && python3 manage.py loaddata currencies rates --settings=settings.test && python3 manage.py runserver 0.0.0.0:8000 --settings=settings.test"
+    command: bash -c "cd fincollect && python3 manage.py makemigrations --no-input --settings=settings.test && python3 manage.py migrate --settings=settings.test && python3 manage.py test --noinput --settings=settings.test"
     ports:
       - "8000:8000"
 

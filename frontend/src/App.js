@@ -63,39 +63,39 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          
-          <p>
+          <h1>
             Test fincollect app
-          </p>
-
+          </h1>
         </header>
-        <div className="form-block">
-          
-          <label><b>Amount</b></label>
-          <input type="text" name="amount" onChange={this.handleChange}/>
-          
-          <label><b>From</b></label>
-          <select name="fromCurrency" onChange={this.handleChange}>
-            {this.state.currencies.map((curr) => 
-            <option value={curr.value} key={curr.value}>{curr.shortName}</option> 
-            )}           
-          </select>
 
-          <label><b>To</b></label>
-          <select name="toCurrency" onChange={this.handleChange}>
-            {this.state.currencies.map((curr) => 
-            <option value={curr.value} key={curr.value}>{curr.shortName}</option> 
-            )}
-          </select>         
+        <div className="form-block">
+          <div>
+            <label><b>Amount</b></label>
+            <input type="text" name="amount" onChange={this.handleChange}/>        
           
+            <label to="fromCurrency"><b>From</b></label>
+            <select name="fromCurrency" onChange={this.handleChange}>
+              {this.state.currencies.map((curr) => 
+              <option value={curr.value} key={curr.value}>{curr.shortName}</option> 
+              )}           
+            </select>
+          
+            <label to="toCurrency"><b>To</b></label>
+            <select name="toCurrency" onChange={this.handleChange}>
+              {this.state.currencies.map((curr) => 
+              <option value={curr.value} key={curr.value}>{curr.shortName}</option> 
+              )}
+            </select>
+          </div>         
+
           <button onClick={this.getRate}>Get rate</button>
         </div>
+
         <div>
-          <p>Rate</p>
-          <p>{ rate }</p>
-          <p>Total Amount</p>
-          <p>{ total }</p>
+          <p>Rate <b>{ rate }</b></p>
+          <p>Total Amount <b>{ total }</b></p>
         </div>
+        
       </div>
     );
   }

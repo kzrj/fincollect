@@ -18,7 +18,7 @@
             {
                 "master_currency": 1,
                 "slave_currency": 2,
-                "rate": 1,
+                "rate": 0.873958,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -30,7 +30,7 @@
             {
                 "master_currency": 1,
                 "slave_currency": 3,
-                "rate": 1,
+                "rate": 3.75355,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -42,7 +42,7 @@
             {
                 "master_currency": 1,
                 "slave_currency": 4,
-                "rate": 1,
+                "rate": 22.5070,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -54,7 +54,7 @@
             {
                 "master_currency": 2,
                 "slave_currency": 1,
-                "rate": 1,
+                "rate": 1.14417,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -78,7 +78,7 @@
             {
                 "master_currency": 2,
                 "slave_currency": 3,
-                "rate": 1,
+                "rate": 4.29440,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -90,7 +90,7 @@
             {
                 "master_currency": 2,
                 "slave_currency": 4,
-                "rate": 1,
+                "rate": 25.7542,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -102,7 +102,7 @@
             {
                 "master_currency": 3,
                 "slave_currency": 1,
-                "rate": 1,
+                "rate": 0.266421,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -114,7 +114,7 @@
             {
                 "master_currency": 3,
                 "slave_currency": 2,
-                "rate": 1,
+                "rate": 0.232843,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -138,7 +138,7 @@
             {
                 "master_currency": 3,
                 "slave_currency": 4,
-                "rate": 1,
+                "rate": 5.99695,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -150,7 +150,7 @@
             {
                 "master_currency": 4,
                 "slave_currency": 1,
-                "rate": 1,
+                "rate": 0.0444294,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -162,7 +162,7 @@
             {
                 "master_currency": 4,
                 "slave_currency": 2,
-                "rate": 1,
+                "rate": 0.0388287,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
@@ -174,7 +174,7 @@
             {
                 "master_currency": 4,
                 "slave_currency": 3,
-                "rate": 1,
+                "rate": 0.166752,
                 "modified_at": "2019-01-27 00:00:00"
             }
 
